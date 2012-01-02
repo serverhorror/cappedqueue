@@ -1,3 +1,7 @@
+// Copyright 2011 Martin Marcher. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 // cappedqueue is a simple package for a queue that never blocks.
 //
 // Non-Blocking in that case means that enqueued items will be lost once the
