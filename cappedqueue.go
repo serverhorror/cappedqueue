@@ -5,7 +5,6 @@
 package cappedqueue
 
 import (
-	"fmt"
 	"log"
 	"os"
 )
@@ -81,8 +80,6 @@ func (c *CappedQueue) Dequeue() interface{} {
 	}
 	return nil
 }
-func Main() {
-	fmt.Println("Hi there, I love cappedqueue")
 }
 
 // vim: set ts=4 sts=4 fenc=utf-8 noexpandtab list:
