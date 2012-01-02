@@ -19,7 +19,7 @@ func TestEmptyDequeue(t *testing.T) {
 }
 
 const (
-	maxCapacity = 10000
+	maxCapacity = 1000
 )
 
 func TestCapacity(t *testing.T) {
