@@ -54,11 +54,9 @@ func (c *CappedQueue) Enqueue(v interface{}) {
 		select {
 		case c.c <- v:
 			// If this fires we successfully put v into our queue
-			// logger.Printf("Enqueing %#v", v)
 			break
 		case <-c.c:
 			// Our queue was full so we remove an item
-			// logger.Printf("Queue Full, dequeued: %#v", v)
 			c.c <- v
 			return
 		}
