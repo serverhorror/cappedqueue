@@ -35,6 +35,19 @@ func TestCapacity(t *testing.T) {
 
 }
 
+func TestNewWithSize0(t *testing.T) {
+	defer func() {
+		reason := recover()
+		if reason == nil {
+			t.Errorf("Prevented a panic, but expected a reason got: %v",
+				reason)
+		} else {
+			t.Logf("Prevented a panic! Reason: %v", reason)
+		}
+	}()
+	New(0)
+}
+
 func TestFull(t *testing.T) {
 	for capacity := 1; capacity < maxCapacity; capacity++ {
 		expected := capacity * 10
