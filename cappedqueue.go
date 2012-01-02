@@ -66,6 +66,11 @@ func (c *CappedQueue) Enqueue(v interface{}) {
 	return
 }
 
+// Nq is an alias for CappedQueue.Enqueue(v interface{})
+func (c *CappedQueue) Nq(v interface{}) {
+	c.Enqueue(v)
+}
+
 // Dequeue returns the item at the front of the queue or nil if the queue is
 // empty.
 //
@@ -80,6 +85,9 @@ func (c *CappedQueue) Dequeue() interface{} {
 	}
 	return nil
 }
+
+func (c *CappedQueue) Dq() interface{} {
+	return c.Dequeue()
 }
 
 // vim: set ts=4 sts=4 fenc=utf-8 noexpandtab list:
