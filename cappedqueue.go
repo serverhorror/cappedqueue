@@ -21,6 +21,9 @@ type CappedQueue struct {
 }
 
 func New(capacity int) CappedQeuer {
+	if capacity == 0 {
+		panic("capacity must be greater than 0")
+	}
 	return &CappedQueue{
 		c: make(chan interface{}, capacity),
 	}
