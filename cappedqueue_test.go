@@ -5,7 +5,9 @@ import (
 )
 
 func TestNew(t *testing.T) {
-	New(0)
+	for capacity := 1; capacity < maxCapacity; capacity++ {
+		New(capacity)
+	}
 }
 
 // func TestEmptyDequeue(t *testing.T){
