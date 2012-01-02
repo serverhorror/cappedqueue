@@ -10,11 +10,13 @@ func TestNew(t *testing.T) {
 	}
 }
 
-// func TestEmptyDequeue(t *testing.T){
-//   cq := New(1)
-//   item := cq.Dequeue()
-//   t.Logf("ITEM: ", item)
-// }
+func TestEmptyDequeue(t *testing.T) {
+	cq := New(1)
+	got := cq.Dequeue()
+	if got != nil {
+		t.Errorf("Got %v, expected %v", got, nil)
+	}
+}
 
 const (
 	maxCapacity = 10000
