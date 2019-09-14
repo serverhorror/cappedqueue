@@ -1,5 +1,6 @@
-  version:1
-  update_configs:
-    - package_manager: "go:modules"
-      directory: "/go_modules/helpers"
-      update_schedule: "daily"
+---
+version:1
+update_configs:
+  - package_manager: "go:modules"
+    directory: "/go_modules/helpers"
+    update_schedule: "daily"
